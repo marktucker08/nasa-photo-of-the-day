@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios';
+import Body from './body';
 
 function App() {
 
@@ -23,9 +24,10 @@ function App() {
       <h1>Nasa Photo of the Day for {nasaData.date}!</h1>
         <img src={nasaData.url} />
         <h2>{nasaData.title}</h2>
-        <p>
+        {/* <p>
         <span role="img" aria-label='go!'>🚀</span> {nasaData.explanation} <span role="img" aria-label='go!'>🚀</span>
-        </p>
+        </p> */}
+        <Body body={nasaData} />
       <footer>
           <h3>Copyright: {nasaData.copyright}</h3>
       </footer>
