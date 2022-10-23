@@ -2,6 +2,27 @@ import React, {useState, useEffect } from "react";
 import "./App.css";
 import axios from 'axios';
 import Body from './body';
+import styled from "styled-components";
+
+const BlueH1 = styled.h1`
+  color: #7F7FFF;
+`;
+
+const StyledDiv = styled.div`
+width: 60%;
+display: flex;
+justify-content: space-between;
+padding: 8px;
+border-bottom: 2px solid white;
+color: white};
+
+transition: all 0.2s ease-in-out;
+&:hover {
+  transition: all 0.2s ease-in-out;
+  background-color: purple;
+}
+`
+// background-color: ${pr => pr.theme.primaryColor};
 
 function App() {
 
@@ -21,7 +42,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Nasa Photo of the Day for {nasaData.date}!</h1>
+      <BlueH1>Nasa Photo of the Day for {nasaData.date}!</BlueH1>
         <img src={nasaData.url} />
         <h2>{nasaData.title}</h2>
         {/* <p>
